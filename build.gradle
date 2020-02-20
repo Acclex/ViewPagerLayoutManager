@@ -2,21 +2,29 @@
 
 buildscript {
     repositories {
-        jcenter()
         google()
+        jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.0.1'
+        classpath 'com.android.tools.build:gradle:3.5.3'
     }
 }
 
 allprojects {
     repositories {
-        jcenter()
         google()
+        jcenter()
     }
 }
 
 task clean(type: Delete) {
     delete rootProject.buildDir
+}
+
+ext {
+    supportLibraryVersion = "1.1.0"
+    compileSDKVersion = 29
+    buildToolsVersion = '29.0.0'
+    minSdkVersion = 16
+    targetSdkVersion = 29
 }
